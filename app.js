@@ -1,4 +1,4 @@
-const items = [
+const Meats = [
     {name: "Ribeye", animal: "Cow", cost: 20},
     {name: "New York Strip", animal: "Cow", cost: 16.50},
     {name: "Filet", animal: "Cow", cost: 30},
@@ -28,7 +28,8 @@ function inject(items){
     `<div class="card">
         <h2 class="card-header">${items.name}</h2>
         <img src="${items.img}" alt="" />
-        <p>filler filler filler</p>
+        <p>${items.animal}</p>
+        <p>${items.cost}</p>
       </div> `,
     );
-}
+};
