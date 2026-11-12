@@ -23,13 +23,22 @@ const Meats = [
 
 function inject(items){
     const container = document.querySelector(".container");
-    container.insertAdjacentElement(
+    container.insertAdjacentHTML(
             "beforeend",
     `<div class="card">
         <h2 class="card-header">${items.name}</h2>
         <img src="${items.img}" alt="" />
         <p>${items.animal}</p>
         <p>${items.cost}</p>
+        <button class="btn"> add to cart</button>
       </div> `,
     );
 };
+
+Meats.forEach(inject);
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => button.addEventListener("click", function(event){
+    console.log(event.target.closest(".card").getAttribute("items.name", "items.cost"));
+}),
+);
