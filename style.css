@@ -1,9 +1,9 @@
 .card {
     height: 600px;
-    width: 500px;
+    width: 550px;
     background-color: rgb(0, 153, 255);
     text-align: center;
-    margin: 2rem;
+    margin: 1rem;
     image-rendering: auto;
 }
 
@@ -12,4 +12,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.img {
+  height: 400px;
+  width: 350px;
+  object-fit: contain;
 }
