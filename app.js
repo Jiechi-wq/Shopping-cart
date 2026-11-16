@@ -25,7 +25,7 @@ function inject(items){
     const container = document.querySelector(".container");
     container.insertAdjacentHTML(
             "beforeend",
-    `<div class="card">
+    `<div class="card" data-item="${items.name}">
         <h2 class="card-header">${items.name}</h2>
         <img class ="img" src="${items.img}" alt="" />
         <p>${items.animal}</p>
@@ -39,6 +39,6 @@ Meats.forEach(inject);
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => button.addEventListener("click", function(event){
-    console.log(event.target.Meats(inject).getAttribute("items.name"));
+    console.log(event.target.closest(".card").getAttribute("data-item"));
 }),
 );
