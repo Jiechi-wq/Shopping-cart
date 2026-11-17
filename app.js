@@ -1,7 +1,7 @@
 const Meats = [
     {name: "Ribeye", animal: "Cow", cost: 20, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREdMgkmT8X9r_E24IIOP_a4BBglJ5ol5ORXBbnpGXU2g&s=10"},
-    {name: "New York Strip", animal: "Cow", cost: 16.50, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8SVcreuVPfoxouiHgudQ430IdeUn_QF8H915L__bXwA&s=10"},
-    {name: "Filet", animal: "Cow", cost: 30, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Gn1_ONugnBByaz4sYWxhqIp7KQ3myO9nsK5xVaLeUw&s=10"},
+    {name: "New York Strip", animal: "Cow", cost: 16.50, img: "https://binksberryhollow.com/wp-content/uploads/2021/03/House-Liner-Boneless-NY-Strip-1030x1030.png"},
+    {name: "Filet", animal: "Cow", cost: 30, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxeL0nyV1HRKp0ZavbOukBK42AAi4tsdCFYs5CI7L27g&s=10"},
     {name: "Sirloin", animal: "Cow", cost: 15, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOepX1Dj0CMFFGCY9gUk9vn_XxTA7XEx_51iTAf4UHg&s=10"},
     {name: "T-Bone", animal: "Cow", cost: 14, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgLF-x91vo2mjqiFakBMrHT2bvPG0H8O_v7upsjpydhg&s=10"},
     {name: "Skirt Steak", animal: "Cow", cost: 15, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGvSYwZ0eFJaKe5g4i-qfYk6G-xDkdNXOoBbq0o6M0Uw&s=10"},
@@ -42,3 +42,4 @@ buttons.forEach((button) => button.addEventListener("click", function(event){
     console.log(event.target.closest(".card").getAttribute("data-item"));
 }),
 );
+
