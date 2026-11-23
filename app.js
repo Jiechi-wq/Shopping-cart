@@ -16,9 +16,9 @@ const Meats = [
     {name: "Rack of Lamb", animal: "Lamb", cost: 35, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVZyDJwKK8h6CGscho5ePALGqQpNp4TlXcbXrRl6q5A&s=10"},
     {name: "Lamb Leg", animal: "Lamb", cost: 60, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4WbNmN4NihiKsGSqZyacw1Xx1_AJz_uiz6VloUcveYA&s=10"},
     {name: "Lamb Chops", animal: "Lamb", cost: 10, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_KHgfTsM4ZTHPFY08-CHPREWKiBUWot2qO3yDoUhgw&s=10"},
-    {name: "Pork Chops", animal: "Pig", cost: 5, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDg5jpZmpmCRyYA4qctdetPa0j_fsZD4u8d5W3Mv-hLQ&s=10"},
-    {name: "Bacon", animal: "Pig", cost: 7, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3HyQg_PgxQr2VJe87p80kkFV3DaDZYgObNwiZAKiRg&s=10"},
-    {name: "Spare Ribs", animal: "Pig", cost: 4, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCjj8NmZlEqOjZY7fI3DBTwAKUi41J8OCm2fjbjqvsg&s=10"},  
+    {name: "Pork Chops", animal: "Pork", cost: 5, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDg5jpZmpmCRyYA4qctdetPa0j_fsZD4u8d5W3Mv-hLQ&s=10"},
+    {name: "Bacon", animal: "Pork", cost: 7, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3HyQg_PgxQr2VJe87p80kkFV3DaDZYgObNwiZAKiRg&s=10"},
+    {name: "Spare Ribs", animal: "Pork", cost: 4, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCjj8NmZlEqOjZY7fI3DBTwAKUi41J8OCm2fjbjqvsg&s=10"},  
 ];
 
 function inject(items){
@@ -41,5 +41,15 @@ buttons.forEach((button) => button.addEventListener("click", function(event){
     console.log(event.target.closest(".card").getAttribute("data-item"));
 }),
 );
+
+function show(categories){
+    const category = document.querySelectorAll(".category");
+    category.insertAdjacentHTML(
+            "beforeend",
+    `<div class="animal">
+    <button data-item="${categories.animal}">${categories.animal}</button>`,
+    );
+};
+Meats.forEach(show);
 
 
