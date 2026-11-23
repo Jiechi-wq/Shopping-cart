@@ -2,14 +2,17 @@ body {
   background-color: #eca6a8;
 }
 .hero {
-  width: 75rem;
-  height: 800px;  
-  margin: 3rem;
-  padding: 2rem;
+  width: 100%;
+  height: 700px;
+  margin-bottom: 1rem;  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(https://media.istockphoto.com/id/2204324236/photo/meat-counter-butcher-shop-fridge-counter-with-assortment-of-raw-meat-glass-display-case-in.jpg?s=612x612&w=0&k=20&c=76eUnTBT_jGazXLPhfe4rSesphiQDOS5Qcuy9yuxfaU=);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 .card {
     height: 600px;
