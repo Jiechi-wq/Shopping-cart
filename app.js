@@ -38,18 +38,9 @@ Meats.forEach(inject);
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => button.addEventListener("click", function(event){
-    console.log(event.target.closest(".card").getAttribute("data-item"));
+    console.log(event.target.closest("button").getAttribute("data-item"));
 }),
 );
 
-function show(categories){
-    const category = document.querySelectorAll(".category");
-    category.insertAdjacentHTML(
-            "beforeend",
-    `<div class="animal">
-    <button data-item="${categories.animal}">${categories.animal}</button>`,
-    );
-};
-Meats.forEach(show);
 
 
