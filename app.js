@@ -36,6 +36,16 @@ function inject(items){
 
 Meats.forEach(inject);
 
+function filterItems(category){
+    const items = document.querySelectorAll("[data-item]");
+    items.forEach((item) => {
+        if(item.getAttribute("data-item") === category || category === "All"){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    })
+};
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => button.addEventListener("click", function(event){
     console.log(event.target.closest("button").getAttribute("data-item"));
