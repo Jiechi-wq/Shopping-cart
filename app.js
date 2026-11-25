@@ -29,7 +29,7 @@ function inject(items){
         <h2 class="card-header">${items.name}</h2>
         <img class ="img" src="${items.img}" alt="" />
         <p>$${items.cost}</p>
-        <button class="btn"> add to cart</button>
+        <button class="btn" onclick ="addToCart('${items.cost}')"> add to cart</button>
       </div> `,
     );
 };
@@ -46,9 +46,14 @@ function filterItems(category){
         }
     })
 };
+
+function addToCart(item){
+
+};
+
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => button.addEventListener("click", function(event){
-    console.log(event.target.closest("button").getAttribute("data-item"));
+    console.log(event.target.closest(".card").getAttribute("data-item"));
 }),
 );
 
